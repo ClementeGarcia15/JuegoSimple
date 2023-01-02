@@ -1,0 +1,55 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #eeeeee;
+  }
+  
+  h1 {
+    color: #333333;
+  }
+  
+  #word {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  #guesses {
+    color: #777777;
+    margin-bottom: 20px;
+  }
+  
+  #message {
+    color: #ff0000;
+    margin-bottom: 20px;
+  }
+  
+  #letterForm {
+    margin-bottom: 20px;
+  }
+  
+  #letter {
+    width: 40px;
+    text-align: center;
+    font-size: 24px;
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid #333333;
+    border-radius: 5px;
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #dddddd;
+  }
+  
+  canvas {
+    border: 2px solid #cccccc;
+  }

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Juego del Ahorcado</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <audio id="Win" src="ganaste.wav"></audio>
+    <audio id="perdiste" src="perdiste_mod.wav"></audio>
+    <audio id="enviar" src="Enviar.wav"></audio>
+    <audio id="acert" src="acert.wav"></audio>
+    <audio id="noacert" src="noacert.wav"></audio>
+  
+  <h1>Juego del Ahorcado</h1>
+  <p id="word"></p>
+  <p id="guesses"></p>
+  <p id="message"></p>
+  <form id="letterForm">
+    <label for="letter">Ingrese una letra:</label><br>
+    <input type="text" id="letter" maxlength="1">
+    <button type="submit">Enviar</button>
+  </form>
+  <canvas id="hangman" width="200" height="200"></canvas>
+  <script src="scripts.js"></script>
+</body>
+</html>
