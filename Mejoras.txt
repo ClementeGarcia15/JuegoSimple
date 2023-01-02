@@ -1,8 +1,0 @@
-Aquí hay algunos cambios que podrías hacer para mejorar el código:
-
-Considera renombrar las variables a nombres más descriptivos y fáciles de entender. Por ejemplo, en lugar de wordEl, podrías usar palabraContainer o algo similar.
-En lugar de declarar todas las variables de almacenamiento al principio del archivo, podrías declararlas dentro de la función init() para asegurarte de que estén restablecidas a sus valores iniciales cada vez que se inicie el juego.
-Considera usar una estructura de control de flujo, como una estructura switch, para manejar los mensajes de error en lugar de usar varias líneas de if y return.
-Considera usar una constante para almacenar el número máximo de intentos permitidos en lugar de usar el número 6 directamente en la línea guessesEl.textContent = Intentos: ${wrongGuesses.length}/${6};. De esta manera, si quisieras cambiar el número máximo de intentos, solo tendrías que cambiar el valor de la constante en un lugar.
-Considera usar una función para dibujar el ahorcado en lugar de tener todo el código de dibujo en el manejador del evento de submit. De esta manera, puedes reutilizar el código de dibujo cada vez que necesites actualizar el dibujo del ahorcado.
-Considera usar una función para verificar si el usuario ha ganado o perdido en lugar de tener el código de comprobación en varias partes del código. De esta manera, puedes asegurarte de que el código de comprobación sea consistente y no tengas que escribirlo varias veces.
