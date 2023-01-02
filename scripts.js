@@ -121,10 +121,7 @@ function handleGuess(e) {
         acert.play(); // reproduce acert
         correctGuesses.push(letter); //se coloca la letra en la pagina
         wordEl.textContent = word.split('').map(letter => (correctGuesses.includes(letter) ? letter : ' _ ')).join('');
-        console.log("Tamanho palabra: " + word.length);
-        console.log("Tamanho letras correcta: " + correctGuesses.length);
-        console.log(word);
-
+      
         // verifica si el usuario a perdido o ganado
         checkwin();
     } else {
