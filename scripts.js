@@ -5,6 +5,7 @@ const messageEl = document.getElementById('message');
 const formEl = document.getElementById('letterForm');
 const canvasEl = document.getElementById('hangman');
 const context = canvasEl.getContext('2d');
+const inputEl = document.getElementById('letterForm').elements.letter;
 
 //audios
 const win = document.getElementById('Win');
@@ -15,6 +16,73 @@ const noacert = document.getElementById('noacert');
 
 // Array de palabras para adivinar
 const words = [
+  'ABANICO',
+  'ABRAZO',
+  'ABRIR',
+  'BAILE',
+  'BARCO',
+  'CARRO',
+  'CIEN',
+  'DEDO',
+  'DEPORTE',
+  'DULCE',
+  'ELEFANTE',
+  'ESQUINA',
+  'FUEGO',
+  'FRUTAS',
+  'FIESTA',
+  'GATO',
+  'GLOBO',
+  'GRANO',
+  'HIELO',
+  'HOGAR',
+  'IGLESIA',
+  'ISLA',
+  'JARDIN',
+  'JIRAFA',
+  'JUICIO',
+  'KIWI',
+  'KOALA',
+  'KARATE',
+  'LECHE',
+  'MAIZ',
+  'MANO',
+  'MAR',
+  'NARANJA',
+  'NAVIDAD',
+  'NUBE',
+  'OJO',
+  'OLA',
+  'OSO',
+  'PERRO',
+  'PLATANO',
+  'PODER',
+  'QUESO',
+  'QUITAR',
+  'QUINCERATON',
+  'ROJO',
+  'ROSADO',
+  'SUEÑO',
+  'TIGRE',
+  'TIEMPO',
+  'UVA',
+  'ÚNICO',
+  'UNIVERSO',
+  'VALLE',
+  'VELA',
+  'VERDE',
+  'WAFFLES',
+  'WHISKY',
+  'WIMBLEDON',
+  'XILÓFONO',
+  'XEROX',
+  'XILOGRAFIA',
+  'YO-YO',
+  'YOGA',
+  'YEMA',
+  'ZAPATO',
+  'ZORRO',
+  'ZUMBIDO',
   'PERFECCION',
   'INICIAR',
   'MANERA',
@@ -24,7 +92,7 @@ const words = [
   'FLOR',
   'CAJA',
   'FOCO',
-  'NUEVO', 
+  'NUEVO',
   'CELULAR',
   'VESTIDO',
   'MOMENTO',
@@ -38,7 +106,7 @@ const words = [
   'CEPILLO',
   'RELOJ',
   'MUEBLE',
-  'SELLO', 
+  'SELLO',
   'HUESO',
   'LEON',
   'CANGREJO',
@@ -65,6 +133,7 @@ const words = [
   'INFIERNO',
   'LUNA'
 ];
+console.log(words.length);
 
 // variables de almacenamiento
 let word;
@@ -88,6 +157,7 @@ function init() {
     
     // al hacer click envia llama al funcion handleGues
     formEl.addEventListener('submit', handleGuess);
+    inputEl.focus();
 }
 
 // Funcion para validar letra
@@ -121,7 +191,7 @@ function handleGuess(e) {
         acert.play(); // reproduce acert
         correctGuesses.push(letter); //se coloca la letra en la pagina
         wordEl.textContent = word.split('').map(letter => (correctGuesses.includes(letter) ? letter : ' _ ')).join('');
-      
+        
         // verifica si el usuario a perdido o ganado
         checkwin();
     } else {
@@ -132,6 +202,8 @@ function handleGuess(e) {
         checkwin();
     }
 }
+
+
 
 // Funcion para verificar si el usuario ha ganado o perdido
 function checkwin(){
